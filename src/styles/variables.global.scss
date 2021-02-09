@@ -1,0 +1,29 @@
+//screen resolution
+$tablet: "(min-width: 768px) and (max-width: 1024px)";
+$phone: "(max-width: 768px)";
+
+$root-font-size: 16px;
+
+$base-background-color: linear-gradient(135deg, #f5f8fa 0%, #dae1e8 100%);
+
+$white: #ffffff;
+$black: #0d1e36;
+
+$gray-color-1: #ced8de;
+$gray-color-2: #bcc9d1;
+$gray-color-3: #90a0ab;
+$gray-color-4: #6c8391;
+$gray-color-5: #999;
+
+//input
+$input-border-color: $gray-color-1;
+$input-search-icon-color: $gray-color-2;
+$input-placeholder-text-color: $gray-color-3;
+
+//dropdown
+$dropdown-border-color: $gray-color-1;
+$arrow-color: $gray-color-2;
+$dropdown-placeholder-text-color: $gray-color-3;
+
+//card
+$card-box-shadow: 0 3px 10px 0 rgba(8, 38, 60, 0.07);

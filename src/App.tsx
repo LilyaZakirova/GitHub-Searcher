@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import { Provider } from "react-redux";
 
-function App() {
+import SearchPage from "components/SearchPage";
+
+import { store } from "store";
+
+import styles from "./App.module.scss";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <main className={styles["content"]}>
+          <Switch>
+            <Redirect exact from="/" to="/search" />
+            <Route exact path="/search">
+              <SearchPage />
+            </Route>
+            <Route component={() => <div>Not Found</div>} />
+          </Switch>
+        </main>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

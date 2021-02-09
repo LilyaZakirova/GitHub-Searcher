@@ -1,0 +1,59 @@
+@import "styles/variables.global.scss";
+@import "styles/mixins.global.scss";
+
+.wrapper {
+  @include size(rem(200px), rem(40px));
+   &:global(.is-open) {
+    > :global(.Dropdown-control) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  } 
+  > :global(.Dropdown-control) > :global(.is-selected) {
+    color: $black;
+  }
+}
+
+.control {
+  @include size(rem(200px), rem(40px));
+  border: rem(1px) solid $dropdown-border-color;
+  border-radius: rem(4px);
+  padding-left: rem(15px);
+  padding-right: rem(40px);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.arrow {
+  @include size(rem(10px), rem(5px));
+  margin-right: rem(15px);
+  margin-left: rem(15px);
+  right: 0;
+  top: rem(17px);
+  cursor: pointer;
+}
+
+.placeholder {
+  color: $dropdown-placeholder-text-color;
+  font-size: rem(14px);
+  line-height: rem(20px);
+}
+
+.menu {
+  border: rem(1px) solid $dropdown-border-color;
+  border-bottom-left-radius: rem(4px);
+  border-bottom-right-radius: rem(4px);
+  color: $black;
+  font-size: rem(14px);
+  line-height: rem(20px);
+  box-shadow: none;
+}
+
+.drop-down-bold {
+  font-weight: bold;
+  margin-right: rem(5px);
+}

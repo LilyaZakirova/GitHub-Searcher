@@ -1,0 +1,98 @@
+@import "styles/variables.global.scss";
+@import "styles/mixins.global.scss";
+
+.page-container {
+  @include size(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.page-container-with-cards {
+  display: block;
+}
+
+.searcher-container {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  @media #{$phone} {
+    width: 100%;;
+  }
+}
+
+.header-block {
+  margin-bottom: rem(15px);
+}
+
+.controls-container {
+  display: flex;
+  width: max-content;
+  @media #{$phone} {
+    flex-flow: column;
+  }
+}
+
+.search-input {
+  margin-right: rem(10px);
+  @media #{$phone} {
+    margin-bottom: rem(10px);
+  }
+}
+
+.cards-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  max-width: 33.33%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  margin-right: rem(20px);
+  margin-bottom: rem(20px);
+  @media #{$tablet} {
+    width: calc(50% - 20px);
+    max-width: 50%;
+  }
+  @media #{$phone} {
+    margin-right: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.user-card {
+  min-height: rem(260px);
+}
+
+.repository-card {
+  min-height: rem(320px);
+}
+  
+.searcher-container-with-cards-on-page {
+  margin-bottom: rem(20px);
+}
+
+.card-each-third {
+  margin-right: 0;
+  @media #{$tablet} {
+    margin-right: rem(20px);
+  }
+}
+
+.card-each-second {
+  @media #{$tablet} {
+    margin-right: 0;
+  }
+}
+
+.notification {
+  font-size: rem(14px);
+  line-height: rem(16px);
+  color: $gray-color-5;
+  padding-top: rem(10px);
+}

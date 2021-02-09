@@ -1,0 +1,36 @@
+@import "styles/variables.global.scss";
+@import "styles/mixins.global.scss";
+
+.search-box {
+  position: relative;
+  @include size(rem(220px), rem(40px));
+}
+
+.search {
+  @include size(100%, 100%);
+  border-radius: rem(4px);
+  border: rem(1px) solid $input-border-color;
+  padding-left: rem(35px);
+  padding-right: rem(25px);
+  outline: none;
+  color: $black;
+  font-size: rem(14px);
+  font-family: "Open Sans";
+
+  &::placeholder {
+    color: $input-placeholder-text-color;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  left: rem(10px);
+  top: rem(10px);
+  path {
+    fill: $gray-color-5;
+  }
+
+  &:hover {
+    cursor: text;
+  }
+}

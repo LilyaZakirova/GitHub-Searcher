@@ -1,0 +1,22 @@
+export enum SearchActionType {
+  UPDATE_INPUT_VALUE,
+  UPDATE_DROPDOWN_VALUE,
+  FETCH_REPOS,
+  FETCH_USERS,
+  HANDLE_FETCH_STARTED,
+  HANDLE_FETCH_SUCCESS,
+  HANDLE_FETCH_FAILURE,
+  FETCH_USERS_DEEPER,
+  CLEAR_USERS,
+  CLEAR_REPOS,
+}
+
+export enum FetchActionType {
+  FETCH_REPOS,
+  FETCH_USERS,
+}
+
+export enum ClearActionType {
+  CLEAR_USERS,
+  CLEAR_REPOS,
+}

@@ -1,0 +1,10 @@
+//px to rem
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+
+//block size
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}

@@ -1,0 +1,9 @@
+@import "styles/variables.global.scss";
+@import "styles/mixins.global.scss";
+
+.content {
+  background: $base-background-color;
+  padding: rem(35px);
+  min-height: 100%;
+  display: flex;
+}

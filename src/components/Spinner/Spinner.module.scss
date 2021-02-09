@@ -1,0 +1,12 @@
+@import "styles/variables.global.scss";
+@import "styles/mixins.global.scss";
+
+.spinner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:50%;
+  transform:translate(0, -50%);
+  bottom: 0;
+  margin: 0 auto;
+}
